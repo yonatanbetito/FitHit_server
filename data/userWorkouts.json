@@ -1,0 +1,18 @@
+{
+  "1": [
+    {
+      "exerciseId": 1,
+      "completed": true
+    },
+    {
+      "exerciseId": 2,
+      "completed": false
+    }
+  ],
+  "2": [
+    {
+      "exerciseId": 3,
+      "completed": true
+    }
+  ]
+}

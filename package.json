@@ -1,0 +1,26 @@
+{
+  "name": "fithit-backend",
+  "version": "1.0.0",
+  "description": "FitHit - Simple exercises API server",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "fitness",
+    "exercises",
+    "api"
+  ],
+  "author": "FitHit Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
