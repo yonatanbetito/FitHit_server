@@ -18,18 +18,13 @@ app.use(
   })
 );
 
-
 app.use(express.json());
-
-
 
 // Routes
 app.use("/", router);
 app.use("/", profileRouter);
 app.use("/", userWorkoutsRouter);
 
-
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`FitHit Server is running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
 });

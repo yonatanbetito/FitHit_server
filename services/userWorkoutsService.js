@@ -1,17 +1,15 @@
 import fs from "fs/promises";
-import path from "path";
-import dotenv from "dotenv";
-dotenv.config();
 
-const userWorkoutsPath = path.resolve(
-  process.env.USER_WORKOUTS_FILE_PATH || "data/userWorkouts.json"
-);
+const userWorkoutsPath = "data/userWorkouts.json";
+;
 
 // get workouts for a specific user
 export async function getWorkoutsByUserId(userId) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
+
     const userWorkouts = JSON.parse(data);
+    // console.log("user workouts:", userWorkouts);
 
     return userWorkouts[userId] || [];
   } catch (error) {
@@ -27,14 +25,19 @@ export async function addWorkoutToUser(userId, workout) {
     const userWorkouts = JSON.parse(data);
 
     const newWorkout = {
-      id: Date.now().toString(),
-      userId,
-      ...workout,
+      exerciseId: workout.id,
+      title: workout.title,
+      category: workout.category,
+      description: workout.description,
+      media: workout.media,
       completed: false,
-      dateAdded: new Date().toISOString(),
     };
+    if (!userWorkouts[String(userId)]) {
+      userWorkouts[String(userId)] = [];
+    }
 
-    userWorkouts.push(newWorkout);
+    // Add the workout to the user's array
+    userWorkouts[String(userId)].push(newWorkout);
 
     await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
     return newWorkout;
@@ -60,7 +63,7 @@ export async function markWorkoutCompleted(userId, exerciseId) {
     }
 
     userWorkouts[workoutIndex].completed = true;
-    userWorkouts[workoutIndex].completedDate = new Date().toISOString();
+    // userWorkouts[workoutIndex].completedDate = new Date().toISOString();
 
     await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
     return userWorkouts[workoutIndex];
