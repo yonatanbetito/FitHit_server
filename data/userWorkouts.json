@@ -1,78 +1,148 @@
 {
-  "1": [
-    {
-      "exerciseId": 1,
-      "title": "Left ankle rotation",
-      "category": "Legs",
-      "description": [
-        " Start with your left foot on your toes, hands on your waist.",
-        " 1-4 rotate your foot clockwise.",
-        "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
-      ],
-      "media": "/legs.png",
-      "completed": false
-    },
-    {
-      "exerciseId": 5,
-      "title": "Bicep Curls",
-      "category": "Arms",
-      "description": [
-        "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
-        "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
-        "Lower the weights slowly back to the starting position."
-      ],
-      "media": "/arms.png",
-      "completed": false
-    },
-    {
-      "exerciseId": 4,
-      "title": "Bodyweight Squat",
-      "category": "Legs",
-      "description": [
-        "Stand with your feet shoulder-width apart, arms straight in front of you.",
-        "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
-        "Push through your heels to return to standing position."
-      ],
-      "media": "/legs.png",
-      "completed": false
-    }
-  ],
-  "2": [
-    {
-      "exerciseId": 3,
-      "title": "Windmill",
-      "category": "Back",
-      "description": [
-        "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
-        "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
-      ],
-      "media": "/back1.png",
-      "completed": true
-    }
-  ],
-  "3": [
-    {
-      "exerciseId": 3,
-      "title": "Windmill",
-      "category": "Back",
-      "description": [
-        "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
-        "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
-      ],
-      "media": "/back1.png",
-      "completed": true
-    },
-    {
-      "exerciseId": 1,
-      "title": "Left ankle rotation",
-      "category": "Legs",
-      "description": [
-        " Start with your left foot on your toes, hands on your waist.",
-        " 1-4 rotate your foot clockwise.",
-        "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
-      ],
-      "media": "/legs.png",
-      "completed": false
-    }
-  ]
+  "1": {
+    "workoutsDone": [],
+    "workoutsToDo": [
+      {
+        "exerciseId": 4,
+        "title": "Bodyweight Squat",
+        "category": "Legs",
+        "description": [
+          "Stand with your feet shoulder-width apart, arms straight in front of you.",
+          "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
+          "Push through your heels to return to standing position."
+        ],
+        "media": "/legs.png",
+        "completed": false
+      },
+      {
+        "exerciseId": 1,
+        "title": "Left ankle rotation",
+        "category": "Legs",
+        "description": [
+          " Start with your left foot on your toes, hands on your waist.",
+          " 1-4 rotate your foot clockwise.",
+          "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
+        ],
+        "media": "/legs.png",
+        "completed": false
+      },
+      {
+        "exerciseId": 5,
+        "title": "Bicep Curls",
+        "category": "Arms",
+        "description": [
+          "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
+          "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
+          "Lower the weights slowly back to the starting position."
+        ],
+        "media": "/arms.png",
+        "completed": false
+      }
+    ]
+  },
+  "2": {
+    "workoutsDone": [
+      {
+        "exerciseId": 3,
+        "title": "Windmill",
+        "category": "Back",
+        "description": [
+          "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
+          "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
+        ],
+        "media": "/back1.png",
+        "completed": true
+      }
+    ],
+    "workoutsToDo": []
+  },
+  "3": {
+    "workoutsDone": [
+      {
+        "exerciseId": 1,
+        "title": "Left ankle rotation",
+        "category": "Legs",
+        "description": [
+          " Start with your left foot on your toes, hands on your waist.",
+          " 1-4 rotate your foot clockwise.",
+          "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
+        ],
+        "media": "/legs.png",
+        "completed": true
+      },
+      {
+        "exerciseId": 3,
+        "title": "Windmill",
+        "category": "Back",
+        "description": [
+          "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
+          "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
+        ],
+        "media": "/back1.png",
+        "completed": true
+      },
+      {
+        "exerciseId": 6,
+        "title": "Glute Bridge",
+        "category": "Legs",
+        "description": [
+          "Lie on your back with knees bent and feet flat on the floor, hip-width apart.",
+          "Lift your hips toward the ceiling by squeezing your glutes.",
+          "Hold for a moment and slowly lower your hips back down."
+        ],
+        "media": "/legs.png",
+        "completed": true
+      },
+      {
+        "exerciseId": 8,
+        "title": "Plank Shoulder Tap",
+        "category": "Back",
+        "description": [
+          "Start in a high plank position with your hands under your shoulders.",
+          "Tap your right hand to your left shoulder while keeping your hips stable.",
+          "Return to plank and repeat with the other side."
+        ],
+        "media": "/back1.png",
+        "completed": true
+      }
+    ],
+    "workoutsToDo": [
+      {
+        "exerciseId": 4,
+        "title": "Bodyweight Squat",
+        "category": "Legs",
+        "description": [
+          "Stand with your feet shoulder-width apart, arms straight in front of you.",
+          "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
+          "Push through your heels to return to standing position."
+        ],
+        "media": "/legs.png",
+        "completed": false
+      },
+      {
+        "exerciseId": 5,
+        "title": "Bicep Curls",
+        "category": "Arms",
+        "description": [
+          "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
+          "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
+          "Lower the weights slowly back to the starting position."
+        ],
+        "media": "/arms.png",
+        "completed": false
+      },
+      {
+        "exerciseId": 7,
+        "title": "Push-up",
+        "category": "Back",
+        "description": [
+          "Place your hands on the floor, slightly wider than shoulder-width apart.",
+          "Lower your chest toward the floor by bending your elbows.",
+          "Push back up to the starting position while keeping your body straight."
+        ],
+        "media": "/back1.png",
+        "completed": false
+      }
+    ]
+  }
 }

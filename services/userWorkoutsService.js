@@ -7,9 +7,9 @@ export async function getWorkoutsByUserId(userId) {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
 
     const userWorkouts = JSON.parse(data);
-    // console.log("user workouts:", userWorkouts);
 
-    return userWorkouts[userId] || [];
+    //return 2 list done/to do
+    return userWorkouts[userId] || { workoutsDone: [], workoutsToDo: [] };
   } catch (error) {
     console.error("Error fetching user workouts:", error);
     throw error;
@@ -28,14 +28,23 @@ export async function addWorkoutToUser(userId, workout) {
       category: workout.category,
       description: workout.description,
       media: workout.media,
-      completed: false,
+      completed: workout.completed || false,
     };
+
+    //if not found creat new one
     if (!userWorkouts[String(userId)]) {
-      userWorkouts[String(userId)] = [];
+      userWorkouts[String(userId)] = {
+        workoutsDone: [],
+        workoutsToDo: [],
+      };
     }
 
-    // Add the workout to the user's array
-    userWorkouts[String(userId)].push(newWorkout);
+    //check and add to correct one
+    if (newWorkout.completed === true) {
+      userWorkouts[String(userId)].workoutsDone.push(newWorkout);
+    } else {
+      userWorkouts[String(userId)].workoutsToDo.push(newWorkout);
+    }
 
     await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
     return newWorkout;
@@ -51,18 +60,50 @@ export async function markWorkoutCompleted(userId, exerciseId, completed) {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
     const userWorkouts = JSON.parse(data);
 
-    const workoutIndex = userWorkouts[String(userId)].findIndex(
-      (workout) => String(workout.exerciseId) === String(exerciseId)
+    if (!userWorkouts[String(userId)]) {
+      throw new Error("User not found");
+    }
+
+    let workout = null;
+
+    //delete from workoutsToDo
+    const todoIndex = userWorkouts[String(userId)].workoutsToDo.findIndex(
+      (w) => String(w.exerciseId) === String(exerciseId)
     );
 
-    if (workoutIndex === -1) {
+    if (todoIndex !== -1) {
+      workout = userWorkouts[String(userId)].workoutsToDo.splice(
+        todoIndex,
+        1
+      )[0];
+    } else {
+      //delete from workoutsDone
+      const doneIndex = userWorkouts[String(userId)].workoutsDone.findIndex(
+        (w) => String(w.exerciseId) === String(exerciseId)
+      );
+
+      if (doneIndex !== -1) {
+        workout = userWorkouts[String(userId)].workoutsDone.splice(
+          doneIndex,
+          1
+        )[0];
+      }
+    }
+
+    if (!workout) {
       throw new Error("Workout not found for this user");
     }
 
-    userWorkouts[String(userId)][workoutIndex].completed = completed;
+    //update status
+    workout.completed = completed;
+    if (completed) {
+      userWorkouts[String(userId)].workoutsDone.push(workout);
+    } else {
+      userWorkouts[String(userId)].workoutsToDo.push(workout);
+    }
 
     await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
-    return userWorkouts[String(userId)][workoutIndex];
+    return workout;
   } catch (error) {
     console.error("Error marking workout as completed:", error);
     throw error;
@@ -79,7 +120,17 @@ export async function deleteWorkoutFromUser(userId, exerciseId) {
       throw new Error("User not found");
     }
 
-    userWorkouts[String(userId)] = userWorkouts[String(userId)].filter(
+    //remove from workoutsToDo
+    userWorkouts[String(userId)].workoutsToDo = userWorkouts[
+      String(userId)
+    ].workoutsToDo.filter(
+      (workout) => String(workout.exerciseId) !== String(exerciseId)
+    );
+
+    //delete from workoutsDone
+    userWorkouts[String(userId)].workoutsDone = userWorkouts[
+      String(userId)
+    ].workoutsDone.filter(
       (workout) => String(workout.exerciseId) !== String(exerciseId)
     );
 
