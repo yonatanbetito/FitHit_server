@@ -8,7 +8,7 @@
       " 1-4 rotate your foot clockwise.",
       "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
     ],
-    "media": "/legs.png"
+    "media": "/images/legs.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
       "Press the weights upward until your arms are fully extended above your head.",
       "Slowly lower the dumbbells back to shoulder height and repeat."
     ],
-    "media": "/arms.png"
+    "media": "/images/arms.png"
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
       "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
       "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
     ],
-    "media": "/back1.png"
+    "media": "/images/back1.png"
   },
   {
     "id": 4,
@@ -40,7 +40,7 @@
       "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
       "Push through your heels to return to standing position."
     ],
-    "media": "/legs.png"
+    "media": "/images/legs.png"
   },
   {
     "id": 5,
@@ -51,7 +51,7 @@
       "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
       "Lower the weights slowly back to the starting position."
     ],
-    "media": "/arms.png"
+    "media": "/images/arms.png"
   },
   {
     "id": 6,
@@ -62,7 +62,7 @@
       "Lift your hips toward the ceiling by squeezing your glutes.",
       "Hold for a moment and slowly lower your hips back down."
     ],
-    "media": "/legs.png"
+    "media": "/images/legs.png"
   },
   {
     "id": 7,
@@ -73,7 +73,7 @@
       "Lower your chest toward the floor by bending your elbows.",
       "Push back up to the starting position while keeping your body straight."
     ],
-    "media": "/back1.png"
+    "media": "/images/back1.png"
   },
   {
     "id": 8,
@@ -84,7 +84,7 @@
       "Tap your right hand to your left shoulder while keeping your hips stable.",
       "Return to plank and repeat with the other side."
     ],
-    "media": "/back1.png"
+    "media": "/images/back1.png"
   },
   {
     "id": 9,
@@ -95,6 +95,6 @@
       "Slide your hips off the edge and lower your body by bending your elbows to about 90 degrees.",
       "Push through your palms to extend your arms and return to the starting position."
     ],
-    "media": "/arms.png"
+    "media": "/images/arms.png"
   }
 ]
