@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 
 const userWorkoutsPath = "data/userWorkouts.json";
-// get workouts for a specific user
+// get Workouts for a specific user
 export async function getWorkoutsByUserId(userId) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
@@ -11,7 +11,7 @@ export async function getWorkoutsByUserId(userId) {
     //return 2 list done/to do
     return userWorkouts[userId] || { workoutsDone: [], workoutsToDo: [] };
   } catch (error) {
-    console.error("Error fetching user workouts:", error);
+    console.error("Error fetching user Workouts:", error);
     throw error;
   }
 }

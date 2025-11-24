@@ -1,11 +1,11 @@
 import userWorkoutsService from "../services/userWorkoutsService.js";
 
-// get workouts for a specific user
+// get Workouts for a specific user
 export async function getUserWorkouts(req, res) {
   try {
     const { userId } = req.params;
-    const workouts = await userWorkoutsService.getWorkoutsByUserId(userId);
-    res.json(workouts);
+    const Workouts = await userWorkoutsService.getWorkoutsByUserId(userId);
+    res.json(Workouts);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -52,4 +52,9 @@ export async function deleteWorkoutFromUser(req, res) {
   }
 }
 
-export default { getUserWorkouts, addWorkoutToUser, markWorkoutCompleted, deleteWorkoutFromUser };
+export default {
+  getUserWorkouts,
+  addWorkoutToUser,
+  markWorkoutCompleted,
+  deleteWorkoutFromUser,
+};
