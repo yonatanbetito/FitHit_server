@@ -1,9 +1,9 @@
 import express from "express";
-import { login, updateProfileField } from "../controllers/profileController.js";
+import { Login, updateProfileField } from "../controllers/profileController.js";
 
 const router = express.Router();
 
-router.get("/login", login);
+router.get("/Login", Login);
 router.patch("/profiles/:id", updateProfileField);
 
 export default router;

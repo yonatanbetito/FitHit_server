@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 
-//get profile by email and password
+//get Profile by email and password
 export async function getProfileByEmailAndPassword(email, password) {
   try {
     if (!email || !password) return null;
@@ -14,7 +14,7 @@ export async function getProfileByEmailAndPassword(email, password) {
   }
 }
 
-//update profile field by id
+//update Profile field by id
 export async function updateProfileField(id, changes) {
   try {
     if (!id || !changes) return null;

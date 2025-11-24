@@ -1,7 +1,7 @@
 import profileService from "../services/profileService.js";
 
-// login
-export async function login(req, res) {
+// Login
+export async function Login(req, res) {
   try {
     const { email, password } = req.query;
 
@@ -9,22 +9,22 @@ export async function login(req, res) {
       return res.status(400).json({ error: "Email and password required" });
     }
 
-    const profile = await profileService.getProfileByEmailAndPassword(
+    const Profile = await profileService.getProfileByEmailAndPassword(
       email,
       password
     );
 
-    if (!profile) {
+    if (!Profile) {
       return res.status(404).json({ error: "Invalid credentials" });
     }
 
-    res.json(profile);
+    res.json(Profile);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 }
 
-// update profile field by id
+// update Profile field by id
 export async function updateProfileField(req, res) {
   try {
     const { id } = req.params;
@@ -46,4 +46,4 @@ export async function updateProfileField(req, res) {
   }
 }
 
-export default { login, updateProfileField };
+export default { Login, updateProfileField };
