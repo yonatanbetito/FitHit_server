@@ -21,8 +21,8 @@
     "id": 3,
     "name": "David",
     "age": "28",
-    "height": "168",
-    "weight": "55",
+    "height": "145",
+    "weight": "65",
     "email": "david@gmail.com",
     "password": "1111"
   }
