@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Yonatan",
-    "age": 25,
+    "age": "26",
     "height": 176,
     "weight": "76",
     "email": "yonatan@gmail.com",
@@ -21,8 +21,8 @@
     "id": 3,
     "name": "David",
     "age": "28",
-    "height": "145",
-    "weight": "65",
+    "height": "165",
+    "weight": "45",
     "email": "david@gmail.com",
     "password": "1111"
   }

@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import router from "./routes/exercisesRouter.js";
+
+import exerciseRouter from "./routes/exercisesRouter.js";
 import profileRouter from "./routes/profileRouter.js";
 import userWorkoutsRouter from "./routes/userWorkoutsRouter.js";
 
@@ -21,7 +22,7 @@ app.use(
 app.use(express.json());
 
 // Routes
-app.use("/", router);
+app.use("/", exerciseRouter);
 app.use("/", profileRouter);
 app.use("/", userWorkoutsRouter);
 

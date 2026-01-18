@@ -51,10 +51,3 @@ export async function deleteWorkoutFromUser(req, res) {
     res.status(500).json({ error: error.message });
   }
 }
-
-export default {
-  getUserWorkouts,
-  addWorkoutToUser,
-  markWorkoutCompleted,
-  deleteWorkoutFromUser,
-};

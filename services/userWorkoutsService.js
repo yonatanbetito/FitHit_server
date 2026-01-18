@@ -1,8 +1,9 @@
 import fs from "fs/promises";
 
 const userWorkoutsPath = "data/userWorkouts.json";
+
 // get Workouts for a specific user
-export async function getWorkoutsByUserId(userId) {
+async function getWorkoutsByUserId(userId) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
 
@@ -17,7 +18,7 @@ export async function getWorkoutsByUserId(userId) {
 }
 
 // add a workout to a user
-export async function addWorkoutToUser(userId, workout) {
+async function addWorkoutToUser(userId, workout) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
     const userWorkouts = JSON.parse(data);
@@ -55,7 +56,7 @@ export async function addWorkoutToUser(userId, workout) {
 }
 
 // mark a workout completed/not completed
-export async function markWorkoutCompleted(userId, exerciseId, completed) {
+async function markWorkoutCompleted(userId, exerciseId, completed) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
     const userWorkouts = JSON.parse(data);
@@ -68,7 +69,7 @@ export async function markWorkoutCompleted(userId, exerciseId, completed) {
 
     //delete from workoutsToDo
     const todoIndex = userWorkouts[String(userId)].workoutsToDo.findIndex(
-      (w) => String(w.exerciseId) === String(exerciseId)
+      (workout) => String(workout.exerciseId) === String(exerciseId)
     );
 
     if (todoIndex !== -1) {
@@ -79,7 +80,7 @@ export async function markWorkoutCompleted(userId, exerciseId, completed) {
     } else {
       //delete from workoutsDone
       const doneIndex = userWorkouts[String(userId)].workoutsDone.findIndex(
-        (w) => String(w.exerciseId) === String(exerciseId)
+        (workout) => String(workout.exerciseId) === String(exerciseId)
       );
 
       if (doneIndex !== -1) {
@@ -111,7 +112,7 @@ export async function markWorkoutCompleted(userId, exerciseId, completed) {
 }
 
 // delete a workout from a user
-export async function deleteWorkoutFromUser(userId, exerciseId) {
+async function deleteWorkoutFromUser(userId, exerciseId) {
   try {
     const data = await fs.readFile(userWorkoutsPath, "utf8");
     const userWorkouts = JSON.parse(data);
@@ -120,19 +121,23 @@ export async function deleteWorkoutFromUser(userId, exerciseId) {
       throw new Error("User not found");
     }
 
-    //remove from workoutsToDo
-    userWorkouts[String(userId)].workoutsToDo = userWorkouts[
-      String(userId)
-    ].workoutsToDo.filter(
-      (workout) => String(workout.exerciseId) !== String(exerciseId)
+    //check if done or toDo list and delete
+    const inDone = userWorkouts[String(userId)].workoutsDone.some(
+      (workout) => String(workout.exerciseId) === String(exerciseId)
     );
-
-    //delete from workoutsDone
-    userWorkouts[String(userId)].workoutsDone = userWorkouts[
-      String(userId)
-    ].workoutsDone.filter(
-      (workout) => String(workout.exerciseId) !== String(exerciseId)
-    );
+    if (inDone) {
+      userWorkouts[String(userId)].workoutsDone = userWorkouts[
+        String(userId)
+      ].workoutsDone.filter(
+        (workout) => String(workout.exerciseId) !== String(exerciseId)
+      );
+    } else {
+      userWorkouts[String(userId)].workoutsToDo = userWorkouts[
+        String(userId)
+      ].workoutsToDo.filter(
+        (workout) => String(workout.exerciseId) !== String(exerciseId)
+      );
+    }
 
     await fs.writeFile(userWorkoutsPath, JSON.stringify(userWorkouts, null, 2));
   } catch (error) {

@@ -1,4 +1,5 @@
 import express from "express";
+
 import { Login, updateProfileField } from "../controllers/profileController.js";
 
 const router = express.Router();

@@ -11,7 +11,7 @@ export async function getAllExercises(req, res) {
       message: error.message,
     });
   }
-};
+}
 
 // get exercises by category
 export async function getExercisesByCategory(req, res) {
@@ -25,9 +25,4 @@ export async function getExercisesByCategory(req, res) {
       message: error.message,
     });
   }
-};
-
-export default {
-  getAllExercises,
-  getExercisesByCategory,
-};
+}

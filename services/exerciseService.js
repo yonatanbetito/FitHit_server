@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import dotenv from "dotenv";
+
 dotenv.config();
 
 const exercisesPath = path.resolve(
@@ -8,7 +9,7 @@ const exercisesPath = path.resolve(
 );
 
 //get all from json file
-export async function getAllExercises() {
+async function getAllExercises() {
   try {
     const data = await fs.readFile(exercisesPath, "utf8");
     const exercises = JSON.parse(data);
@@ -21,11 +22,12 @@ export async function getAllExercises() {
 }
 
 //by category
-export async function getExercisesByCategory(category) {
+async function getExercisesByCategory(category) {
   try {
     const exercises = await getAllExercises();
+    const categoryLower = category.toLowerCase();
     const filteredExercises = exercises.filter(
-      (ex) => ex.category.toLowerCase() === category.toLowerCase()
+      (exercise) => exercise.category.toLowerCase() === categoryLower
     );
     return filteredExercises;
   } catch (error) {

@@ -1,10 +1,11 @@
 import express from "express";
+
 import {
   getUserWorkouts,
   addWorkoutToUser,
   markWorkoutCompleted,
   deleteWorkoutFromUser,
-} from "../controllers/userWorkouts.js";
+} from "../controllers/userWorkoutsController.js";
 
 const router = express.Router();
 

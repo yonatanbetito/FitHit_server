@@ -1,19 +1,19 @@
 {
   "1": {
-    "workoutsDone": [],
-    "workoutsToDo": [
+    "workoutsDone": [
       {
-        "exerciseId": 4,
-        "title": "Bodyweight Squat",
-        "category": "Legs",
+        "exerciseId": 3,
+        "title": "Windmill",
+        "category": "Back",
         "description": [
-          "Stand with your feet shoulder-width apart, arms straight in front of you.",
-          "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
-          "Push through your heels to return to standing position."
+          "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
+          "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
         ],
-        "media": "/legs.png",
-        "completed": false
-      },
+        "media": "/images/back1.png",
+        "completed": true
+      }
+    ],
+    "workoutsToDo": [
       {
         "exerciseId": 1,
         "title": "Left ankle rotation",
