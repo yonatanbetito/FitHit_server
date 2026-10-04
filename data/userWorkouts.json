@@ -1,136 +1,178 @@
 {
   "1": {
-    "workoutsDone": [
-      {
-        "exerciseId": 3,
-        "title": "Windmill",
-        "category": "Back",
-        "description": [
-          "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
-          "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
-        ],
-        "media": "/images/back1.png",
-        "completed": true
-      }
-    ],
-    "workoutsToDo": [
-      {
-        "exerciseId": 1,
-        "title": "Left ankle rotation",
-        "category": "Legs",
-        "description": [
-          " Start with your left foot on your toes, hands on your waist.",
-          " 1-4 rotate your foot clockwise.",
-          "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
-        ],
-        "media": "/legs.png",
-        "completed": false
-      },
-      {
-        "exerciseId": 5,
-        "title": "Bicep Curls",
-        "category": "Arms",
-        "description": [
-          "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
-          "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
-          "Lower the weights slowly back to the starting position."
-        ],
-        "media": "/arms.png",
-        "completed": false
-      }
-    ]
+    "2026-10-04": {
+      "workoutsDone": [
+        {
+          "exerciseId": 5,
+          "title": "Bicep Curls",
+          "category": "Arms",
+          "description": [
+            "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
+            "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
+            "Lower the weights slowly back to the starting position."
+          ],
+          "media": "/arms.png",
+          "completed": true
+        },
+        {
+          "exerciseId": 4,
+          "title": "Bodyweight Squat",
+          "category": "Legs",
+          "description": ["Test"],
+          "media": "/images/legs.png",
+          "completed": true
+        }
+      ],
+      "workoutsToDo": [
+        {
+          "exerciseId": 3,
+          "title": "Windmill",
+          "category": "Back",
+          "description": [
+            "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
+            "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
+          ],
+          "media": "/images/back1.png",
+          "completed": false
+        },
+        {
+          "exerciseId": 1,
+          "title": "Left ankle rotation",
+          "category": "Legs",
+          "description": [
+            " Start with your left foot on your toes, hands on your waist.",
+            " 1-4 rotate your foot clockwise.",
+            "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
+          ],
+          "media": "/legs.png",
+          "completed": false
+        }
+      ]
+    },
+    "2026-10-05": {
+      "workoutsDone": [],
+      "workoutsToDo": [
+        {
+          "exerciseId": 2,
+          "title": "Shoulder Press",
+          "category": "Arms",
+          "description": [
+            "Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder height, palms facing forward.",
+            "Press the weights upward until your arms are fully extended above your head.",
+            "Slowly lower the dumbbells back to shoulder height and repeat."
+          ],
+          "media": "/images/arms.png",
+          "completed": false
+        }
+      ]
+    },
+    "2026-10-06": {
+      "workoutsDone": [],
+      "workoutsToDo": [
+        {
+          "exerciseId": 2,
+          "title": "Shoulder Press",
+          "category": "Arms",
+          "description": [
+            "Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder height, palms facing forward.",
+            "Press the weights upward until your arms are fully extended above your head.",
+            "Slowly lower the dumbbells back to shoulder height and repeat."
+          ],
+          "media": "/images/arms.png",
+          "completed": false
+        }
+      ]
+    },
+    "2026-10-07": {
+      "workoutsDone": [
+        {
+          "exerciseId": 2,
+          "title": "Shoulder Press",
+          "category": "Arms",
+          "description": [
+            "Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder height, palms facing forward.",
+            "Press the weights upward until your arms are fully extended above your head.",
+            "Slowly lower the dumbbells back to shoulder height and repeat."
+          ],
+          "media": "/images/arms.png",
+          "completed": true
+        }
+      ],
+      "workoutsToDo": []
+    }
   },
   "2": {
-    "workoutsDone": [
-      {
-        "exerciseId": 3,
-        "title": "Windmill",
-        "category": "Back",
-        "description": [
-          "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
-          "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
-        ],
-        "media": "/back1.png",
-        "completed": true
-      }
-    ],
-    "workoutsToDo": []
+    "2026-10-04": {
+      "workoutsDone": [
+        {
+          "exerciseId": 3,
+          "title": "Windmill",
+          "category": "Back",
+          "description": [
+            "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
+            "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
+          ],
+          "media": "/back1.png",
+          "completed": true
+        }
+      ],
+      "workoutsToDo": [
+        {
+          "exerciseId": 4,
+          "title": "Bodyweight Squat",
+          "category": "Legs",
+          "description": [
+            "Stand with your feet shoulder-width apart, arms straight in front of you.",
+            "Lower your hips back and down as if sitting on a chair, keeping your chest up.",
+            "Push through your heels to return to standing position."
+          ],
+          "media": "/images/legs.png",
+          "completed": false
+        }
+      ]
+    }
   },
   "3": {
-    "workoutsDone": [
-      {
-        "exerciseId": 5,
-        "title": "Bicep Curls",
-        "category": "Arms",
-        "description": [
-          "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
-          "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
-          "Lower the weights slowly back to the starting position."
-        ],
-        "media": "/arms.png",
-        "completed": true
-      },
-      {
-        "exerciseId": 9,
-        "title": "Tricep Dips",
-        "category": "Arms",
-        "description": [
-          "Sit on the edge of a bench or chair, hands next to your hips, fingers facing forward.",
-          "Slide your hips off the edge and lower your body by bending your elbows to about 90 degrees.",
-          "Push through your palms to extend your arms and return to the starting position."
-        ],
-        "media": "/images/arms.png",
-        "completed": true
-      },
-      {
-        "exerciseId": 1,
-        "title": "Left ankle rotation",
-        "category": "Legs",
-        "description": [
-          " Start with your left foot on your toes, hands on your waist.",
-          " 1-4 rotate your foot clockwise.",
-          "5-8 rotate your foot counterclockwise (keep your feet on the floor)."
-        ],
-        "media": "/images/legs.png",
-        "completed": true
-      },
-      {
-        "exerciseId": 2,
-        "title": "Shoulder Press",
-        "category": "Arms",
-        "description": [
-          "Stand with your feet shoulder-width apart, holding a dumbbell in each hand at shoulder height, palms facing forward.",
-          "Press the weights upward until your arms are fully extended above your head.",
-          "Slowly lower the dumbbells back to shoulder height and repeat."
-        ],
-        "media": "/images/arms.png",
-        "completed": true
-      }
-    ],
-    "workoutsToDo": [
-      {
-        "exerciseId": 3,
-        "title": "Windmill",
-        "category": "Back",
-        "description": [
-          "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
-          "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
-        ],
-        "media": "/images/back1.png",
-        "completed": false
-      },
-      {
-        "exerciseId": 6,
-        "title": "Glute Bridge",
-        "category": "Legs",
-        "description": [
-          "Lie on your back with knees bent and feet flat on the floor, hip-width apart.",
-          "Lift your hips toward the ceiling by squeezing your glutes.",
-          "Hold for a moment and slowly lower your hips back down."
-        ],
-        "media": "/images/legs.png",
-        "completed": false
-      }
-    ]
+    "2026-10-04": {
+      "workoutsDone": [
+        {
+          "exerciseId": 5,
+          "title": "Bicep Curls",
+          "category": "Arms",
+          "description": [
+            "Stand tall with your feet shoulder-width apart, holding a dumbbell in each hand.",
+            "Keep your elbows close to your torso and curl the weights upward while contracting your biceps.",
+            "Lower the weights slowly back to the starting position."
+          ],
+          "media": "/arms.png",
+          "completed": true
+        }
+      ],
+      "workoutsToDo": [
+        {
+          "exerciseId": 3,
+          "title": "Windmill",
+          "category": "Back",
+          "description": [
+            "Lean parallel to the floor and spread your arms to the sides, feet placed shoulder-width apart.",
+            "Squeezing your abs and obliques, rotate your body and touch the toes of the opposite foot with your fingers."
+          ],
+          "media": "/images/back1.png",
+          "completed": false
+        },
+        {
+          "exerciseId": 6,
+          "title": "Glute Bridge",
+          "category": "Legs",
+          "description": [
+            "Lie on your back with knees bent and feet flat on the floor, hip-width apart.",
+            "Lift your hips toward the ceiling by squeezing your glutes.",
+            "Hold for a moment and slowly lower your hips back down."
+          ],
+          "media": "/images/legs.png",
+          "completed": false
+        }
+      ]
+    }
   }
 }
