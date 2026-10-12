@@ -11,12 +11,16 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://myfithit.netlify.app"],
+    origin: [
+      "http://localhost:5173",
+      "https://myfithit.netlify.app",
+      "https://deploy-preview-1--myfithit.netlify.app",
+    ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     optionsSuccessStatus: 200,
-  })
+  }),
 );
 
 app.use(express.json());
